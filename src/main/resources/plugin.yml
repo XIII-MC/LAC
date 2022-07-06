@@ -1,0 +1,10 @@
+name: LAC
+version: '${project.version}'
+main: com.xiii.libertycity.LAC
+authors: [ XIII___ ]
+description: LibertyCity's Anti-Cheat
+commands:
+  lac:
+    description: LibertyCity's Anti-Cheat main command.
+    usage: /lac
+    permission: LibertyCity.LAC.command.main
