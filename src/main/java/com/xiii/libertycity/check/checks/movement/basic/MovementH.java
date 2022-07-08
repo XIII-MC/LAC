@@ -10,7 +10,7 @@ import io.github.retrooper.packetevents.event.impl.PacketPlayReceiveEvent;
 public class MovementH extends Check {
 
     public void onMove(PacketPlayReceiveEvent packet, double motionX, double motionY, double motionZ, double lastmotionX, double lastmotionY, double lastmotionZ, float deltaYaw, float deltaPitch, float lastdeltaYaw, float lastdeltaPitch) {
-        boolean exempt = isExempt(ExemptType.FLYING, ExemptType.SLIME, ExemptType.TELEPORT, ExemptType.JOINED, ExemptType.INSIDE_VEHICLE, ExemptType.NEAR_VEHICLE, ExemptType.CLIMBABLE, ExemptType.LIQUID, ExemptType.STAIRS, ExemptType.SLAB);
+        boolean exempt = isExempt(ExemptType.FLYING, ExemptType.SLIME, ExemptType.TELEPORT, ExemptType.JOINED, ExemptType.INSIDE_VEHICLE, ExemptType.NEAR_VEHICLE, ExemptType.CLIMBABLE, ExemptType.LIQUID, ExemptType.STAIRS, ExemptType.SLAB, ExemptType.WEB);
         if(lastmotionY - motionY < 0.01)  {
             if(!exempt && motionY != 0 && !data.onLowBlock) fail("Difference de movement impossible", "lmY=" + lastmotionY + " mY=" + motionY);
         }

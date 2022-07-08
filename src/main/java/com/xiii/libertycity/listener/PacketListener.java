@@ -223,6 +223,7 @@ public class PacketListener extends PacketListenerAbstract {
         }
         List<Block> b = blocks;
         data.isInLiquid = b.stream().anyMatch(Block::isLiquid);
+        data.inLiquid = b.stream().allMatch(Block::isLiquid);
         data.inweb = b.stream().anyMatch(block -> block.getType().toString().contains("WEB"));
         data.inAir = b.stream().allMatch(block -> block.getType() == Material.AIR);
         data.onIce = b.stream().anyMatch(block -> block.getType().toString().contains("ICE"));

@@ -12,7 +12,7 @@ public class MovementL extends Check {
     int AirTicks;
 
     public void onMove(PacketPlayReceiveEvent packet, double motionX, double motionY, double motionZ, double lastmotionX, double lastmotionY, double lastmotionZ, float deltaYaw, float deltaPitch, float lastdeltaYaw, float lastdeltaPitch) {
-        boolean exempt = isExempt(ExemptType.GLIDE, ExemptType.FLYING, ExemptType.TELEPORT, ExemptType.JOINED, ExemptType.PLACE, ExemptType.NEAR_VEHICLE, ExemptType.INSIDE_VEHICLE, ExemptType.PISTON);
+        boolean exempt = isExempt(ExemptType.GLIDE, ExemptType.FLYING, ExemptType.TELEPORT, ExemptType.JOINED, ExemptType.PLACE, ExemptType.NEAR_VEHICLE, ExemptType.INSIDE_VEHICLE, ExemptType.PISTON, ExemptType.SLIME, ExemptType.ICE);
         if (!exempt) {
             if (!data.playerGround) {
                 AirTicks++;

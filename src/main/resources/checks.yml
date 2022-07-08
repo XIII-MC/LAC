@@ -168,7 +168,7 @@ Movement A:
   enabled: true
   Buffer:
     addBuffer: 1
-    maxBuffer: 2
+    maxBuffer: 3
     removeBuffer: 1
   Punishments:
     kick: true
@@ -489,7 +489,7 @@ Movement Q:
   enabled: true
   Buffer:
     addBuffer: 1
-    maxBuffer: 1
+    maxBuffer: 2
     removeBuffer: 1
   Punishments:
     kick: true
@@ -520,7 +520,7 @@ Movement U:
 
 #Movement R:
 
-# Type: Basic (FastClimb)
+# Type: BASIC (FastClimb)
 # Info: Climbing too fast on ladder/vines/climb
 # Made: 05/07/2022 | 09:22
 
@@ -531,6 +531,26 @@ Movement R:
     addBuffer: 1
     maxBuffer: 5
     removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 6
+  Messages:
+    broadcastPunish: true
+
+#Movement S:
+
+# Type: ADVANCED (Jump)
+# Info: Prediction jump yMotion
+# Made: 05/07/2022 | 09:22
+
+Movement S:
+  silent: false
+  enabled: true
+  Buffer:
+    addBuffer: 0
+    maxBuffer: 0
+    removeBuffer: 0
   Punishments:
     kick: true
     ban: false

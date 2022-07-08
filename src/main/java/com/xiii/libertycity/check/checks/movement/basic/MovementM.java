@@ -10,7 +10,7 @@ import io.github.retrooper.packetevents.event.impl.PacketPlayReceiveEvent;
 public class MovementM extends Check {
 
     public void onMove(PacketPlayReceiveEvent packet, double motionX, double motionY, double motionZ, double lastmotionX, double lastmotionY, double lastmotionZ, float deltaYaw, float deltaPitch, float lastdeltaYaw, float lastdeltaPitch) {
-        boolean exempt = isExempt(ExemptType.LIQUID, ExemptType.SLIME, ExemptType.BLOCK_ABOVE, ExemptType.VELOCITY, ExemptType.FLYING, ExemptType.TELEPORT, ExemptType.GLIDE);
+        boolean exempt = isExempt(ExemptType.LIQUID, ExemptType.SLIME, ExemptType.BLOCK_ABOVE, ExemptType.VELOCITY, ExemptType.FLYING, ExemptType.TELEPORT, ExemptType.GLIDE, ExemptType.WEB);
         if (!exempt) {
             if(!data.inAir) removeBuffer();
             if(System.currentTimeMillis() - data.lasthurt < 1200) maxBuffer = 2;

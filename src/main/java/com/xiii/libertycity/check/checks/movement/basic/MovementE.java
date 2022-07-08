@@ -16,14 +16,15 @@ public class MovementE extends Check {
         boolean exempt = isExempt(ExemptType.TELEPORT, ExemptType.JOINED, ExemptType.FLYING, ExemptType.INSIDE_VEHICLE);
         if(data.playerGround) invalidA++;
         if(!data.playerGround) invalidA = 0;
-        if(invalidA >= 8) maxSpeed = 0.28804;
+        if(invalidA >= 8) maxSpeed = 0.2884;
         if(invalidA < 8) maxSpeed = 0.62;
         if(data.onLowBlock || isExempt(ExemptType.STAIRS) || isExempt(ExemptType.SLAB)) maxSpeed += 0.2;
         if(isExempt(ExemptType.VELOCITY)) {
             maxSpeed += data.kblevel;
             maxSpeed += 0.45;
         }
-        if(System.currentTimeMillis() - data.lastice < 1800) maxSpeed += 0.25;
+        if(System.currentTimeMillis() - data.lastice < 1800) maxSpeed += 0.35;
+        if(isExempt(ExemptType.SLIME)) maxSpeed += 0.3;
         if(data.getDeltaXZ() >= maxSpeed && !exempt) fail("Movement de téléportation impossible", "cs=" + data.getDeltaXZ() + " ms=" + maxSpeed);
 
     }

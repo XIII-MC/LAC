@@ -104,9 +104,11 @@ public class PlayerData {
     public boolean pistonmove;
     public boolean inweb;
     public long lastice;
+    public boolean inLiquid;
     public boolean onIce;
     public boolean onSlime;
     public boolean onSlime2;
+    public double lastAttack;
     public long lastslime;
     public Entity target;
     public Entity lasttargetreach;
@@ -167,6 +169,7 @@ public class PlayerData {
         registerCheck(new MovementQ());
         registerCheck(new MovementU());
         registerCheck(new MovementR());
+        registerCheck(new MovementS());
 
         registerCheck(new ReachA());
 

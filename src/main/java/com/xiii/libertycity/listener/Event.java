@@ -3,6 +3,7 @@ package com.xiii.libertycity.listener;
 import com.xiii.libertycity.LAC;
 import com.xiii.libertycity.data.Data;
 import com.xiii.libertycity.data.PlayerData;
+import io.github.retrooper.packetevents.packetwrappers.play.in.armanimation.WrappedPacketInArmAnimation;
 import org.bukkit.Bukkit;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Arrow;
@@ -132,6 +133,8 @@ public class Event implements Listener {
             if (e.getEntity() instanceof Player) {
                 Player p = (Player) e.getEntity();
                 PlayerData data = Data.data.getUserData(p);
+                PlayerData temp = Data.data.getUserData((Player) e.getDamager());
+                temp.lastAttack = System.currentTimeMillis();
                 data.lasthurtother = System.currentTimeMillis();
                 data.lastvelocity = System.currentTimeMillis();
                 if(e.getDamager() instanceof Player || e.getDamager() instanceof Entity) {

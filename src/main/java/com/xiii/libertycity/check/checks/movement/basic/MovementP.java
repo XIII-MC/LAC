@@ -17,11 +17,12 @@ public class MovementP extends Check {
 
         boolean exempt = isExempt(ExemptType.SLIME, ExemptType.SLAB, ExemptType.STAIRS, ExemptType.LIQUID, ExemptType.GLIDE, ExemptType.FLYING, ExemptType.NEAR_VEHICLE, ExemptType.INSIDE_VEHICLE, ExemptType.CLIMBABLE, ExemptType.PLACE);
 
-        if(!data.playerGround && motionY > 0.05 && !exempt) airTicks++;
+        if(data.inAir && motionY > 0.05 && !exempt) airTicks++;
         if(motionY <= 0 && !data.inAir) airTicks = 0;
+        if(motionY <= 0 && data.ground2()) airTicks = 0;
 
-        if(isExempt(ExemptType.VELOCITY)) maxTicks = 9;
-        if(!isExempt(ExemptType.VELOCITY)) maxTicks = 6;
+        if(isExempt(ExemptType.VELOCITY) || System.currentTimeMillis() - data.lasthurt < 1200 || System.currentTimeMillis() - data.lasthurtother < 1200) maxTicks = 9;
+        if(!isExempt(ExemptType.VELOCITY) || System.currentTimeMillis() - data.lasthurt >= 1200 || System.currentTimeMillis() - data.lasthurtother >= 1200) maxTicks = 6;
         if(data.onLowBlock || exempt) airTicks = 0;
 
         if(airTicks >= maxTicks && !exempt && !data.onLowBlock) fail("Reste trop longtemps en l'air", "airTicks= " + airTicks + " maxTicks= " + maxTicks);

@@ -24,7 +24,7 @@ public class MovementO extends Check {
         if (nf3 > 0) nf4 = data.player.getLocation().getY();
         if (nf3 < 0) nf5 = data.player.getLocation().getY();
 
-        if (data.inAir && !exempt) {
+        if (data.inAir && !data.ground2() && !exempt) {
             if ((Math.round((nf4 - nf5))) - (Math.round(data.player.getFallDistance())) != 0 && (Math.round((nf4 - nf5)) > 3))
                 fail("Prediction non suivis", "fd=" + Math.round(data.player.getFallDistance()) + " pfd=" + Math.round((nf4 - nf5)));
         }
