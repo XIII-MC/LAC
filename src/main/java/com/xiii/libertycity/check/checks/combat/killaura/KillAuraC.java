@@ -1,6 +1,5 @@
 package com.xiii.libertycity.check.checks.combat.killaura;
 
-import com.sun.xml.internal.ws.api.message.Packet;
 import com.xiii.libertycity.check.Category;
 import com.xiii.libertycity.check.Check;
 import com.xiii.libertycity.check.CheckInfo;
@@ -8,8 +7,6 @@ import com.xiii.libertycity.utils.MathUtils;
 import io.github.retrooper.packetevents.event.impl.PacketPlayReceiveEvent;
 import io.github.retrooper.packetevents.packettype.PacketType;
 import io.github.retrooper.packetevents.packetwrappers.play.in.flying.WrappedPacketInFlying;
-import io.github.retrooper.packetevents.packetwrappers.play.in.useentity.WrappedPacketInUseEntity;
-import io.github.retrooper.packetevents.packetwrappers.play.out.entity.WrappedPacketOutEntity;
 
 @CheckInfo(name = "KillAura", category = Category.COMBAT)
 public class KillAuraC extends Check {

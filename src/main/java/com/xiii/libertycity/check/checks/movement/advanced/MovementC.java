@@ -6,7 +6,6 @@ import com.xiii.libertycity.check.CheckInfo;
 import com.xiii.libertycity.exempt.ExemptType;
 import io.github.retrooper.packetevents.event.impl.PacketPlayReceiveEvent;
 import io.github.retrooper.packetevents.packetwrappers.play.in.flying.WrappedPacketInFlying;
-import org.bukkit.Bukkit;
 
 @CheckInfo(name = "Movement C", category = Category.MOVEMENT)
 public class MovementC extends Check {

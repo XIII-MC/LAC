@@ -3,7 +3,6 @@ package com.xiii.libertycity.listener;
 import com.xiii.libertycity.LAC;
 import com.xiii.libertycity.data.Data;
 import com.xiii.libertycity.data.PlayerData;
-import io.github.retrooper.packetevents.packetwrappers.play.in.armanimation.WrappedPacketInArmAnimation;
 import org.bukkit.Bukkit;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Arrow;

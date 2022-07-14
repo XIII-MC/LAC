@@ -7,12 +7,6 @@ import com.xiii.libertycity.check.CheckInfo;
 import com.xiii.libertycity.utils.MathUtils;
 import io.github.retrooper.packetevents.event.impl.PacketPlayReceiveEvent;
 import io.github.retrooper.packetevents.packettype.PacketType;
-import io.github.retrooper.packetevents.packetwrappers.play.in.useentity.WrappedPacketInUseEntity;
-import io.github.retrooper.packetevents.packetwrappers.play.out.entity.WrappedPacketOutEntity;
-import org.bukkit.GameMode;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.util.Vector;
 
 import java.util.Deque;
 

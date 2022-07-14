@@ -3,6 +3,7 @@ package com.xiii.libertycity.data;
 import com.xiii.libertycity.LAC;
 import com.xiii.libertycity.check.Check;
 import com.xiii.libertycity.check.CheckInfo;
+import com.xiii.libertycity.check.checks.combat.killaura.*;
 import com.xiii.libertycity.check.checks.combat.reach.ReachA;
 import com.xiii.libertycity.check.checks.movement.advanced.*;
 import com.xiii.libertycity.check.checks.movement.basic.*;
@@ -172,6 +173,13 @@ public class PlayerData {
         registerCheck(new MovementS());
 
         registerCheck(new ReachA());
+
+        registerCheck(new KillAuraA());
+        registerCheck(new KillAuraB());
+        registerCheck(new KillAuraC());
+        registerCheck(new KillAuraD());
+        registerCheck(new KillAuraE());
+        registerCheck(new KillAuraF());
 
         Bukkit.getScheduler().runTaskTimerAsynchronously(LAC.instance, () -> {
             if (lasttargetreach != null) {

@@ -5,7 +5,6 @@ import com.xiii.libertycity.check.Check;
 import com.xiii.libertycity.check.CheckInfo;
 import com.xiii.libertycity.exempt.ExemptType;
 import io.github.retrooper.packetevents.event.impl.PacketPlayReceiveEvent;
-import org.bukkit.Bukkit;
 import org.bukkit.potion.PotionEffectType;
 
 @CheckInfo(name = "Movement N", category = Category.MOVEMENT)

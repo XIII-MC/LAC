@@ -5,7 +5,6 @@ import com.xiii.libertycity.check.Check;
 import com.xiii.libertycity.check.CheckInfo;
 import io.github.retrooper.packetevents.event.impl.PacketPlayReceiveEvent;
 import io.github.retrooper.packetevents.packettype.PacketType;
-import io.github.retrooper.packetevents.packetwrappers.NMSPacket;
 import io.github.retrooper.packetevents.packetwrappers.play.in.useentity.WrappedPacketInUseEntity;
 
 @CheckInfo(name = "KillAura D", category = Category.COMBAT)
